@@ -1,5 +1,5 @@
 <p align="center">
-  <img title="imagem rural books" alt="imagem rural books" width=500 margin=auto src="https://github.com/Trabalho-de-LP3-EngSoft/RuralBooks/assets/130375664/3de32341-1ad4-4b72-af73-0c7d25d9bc00">
+  <img title="imagem rural books" alt="imagem rural books" width=500 margin=auto src="https://github.com/Trabalho-de-LP3-EngSoft/RuralBooks/assets/130375664/62228326-354d-4072-b506-5eee04d1ef1d">
 </p> 
 
 # Projeto: Aplicativo de Biblioteca
