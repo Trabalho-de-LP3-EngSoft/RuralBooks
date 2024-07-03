@@ -11,6 +11,10 @@ package br.uffrj.ruralbooks;
 public class Ruralbooks {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new painelPrincipal().setVisible(true);
+            }
+        });
+}
 }
