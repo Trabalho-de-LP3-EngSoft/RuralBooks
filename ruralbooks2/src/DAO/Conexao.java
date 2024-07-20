@@ -28,7 +28,6 @@ import java.sql.SQLException;
             // Estabelece a conexão
             conn = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
         }
         return conn;
     }

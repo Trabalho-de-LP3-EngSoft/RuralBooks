@@ -19,7 +19,7 @@ public class AdicionarUsuario {
        public static void addUser(String nome, String senha, String email, boolean isAdmin) {
             String userSql = "INSERT INTO users (nome, senha, email) VALUES (?, ?, ?)";
             String alunoSql = "INSERT INTO alunos (id, num_emprestimos, num_reservas) VALUES (?, ?, ?)";
-            String adminSql = "INSERT INTO admins (id) VALUES (?, ?)";
+            String adminSql = "INSERT INTO admins (id) VALUES (?)";
 
         try (Connection conn = Conexao.getConnection();
              PreparedStatement userStmt = conn.prepareStatement(userSql, Statement.RETURN_GENERATED_KEYS);
@@ -34,6 +34,7 @@ public class AdicionarUsuario {
 
             // Obter o ID gerado automaticamente para o usuário
             ResultSet generatedKeys = userStmt.getGeneratedKeys();
+            System.out.println("chave gerada:"+generatedKeys);
             if (generatedKeys.next()) {
                 int userId = generatedKeys.getInt(1);
                 System.out.println("chegou");
@@ -154,6 +155,24 @@ public class AdicionarUsuario {
         return "";
     }
        
+        public static String getNomeByID(int id) {
+            String sql = "SELECT nome FROM users WHERE id = ?";
+        
+         try (Connection conn = Conexao.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(sql))
+            {          
+                stmt.setInt(1, id);          
+                 try (ResultSet rs = stmt.executeQuery()) {
+                        if (rs.next()) {
+                        return rs.getString("nome");
+                 }
+                  }           
+        } catch (SQLException e) {
+        }
+        
+        return "";
+    } 
+      
       public static boolean autenticar(String nome, String senha) {
         String sql = "SELECT * FROM users WHERE nome = ? AND senha = ?";
         
@@ -167,7 +186,7 @@ public class AdicionarUsuario {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false; // returns false if no match is found or if an exception occurs
+        return false; // falso se não encontrar 
     }
        
 }

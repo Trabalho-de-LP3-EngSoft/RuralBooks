@@ -5,7 +5,7 @@
 package gui;
 
 import DAO.MetodosLivros;
-import classes.Livro;
+import classes.Obra;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
@@ -23,13 +23,13 @@ public class Busca extends javax.swing.JFrame {
 private void preencheTabela(String text) {
     
     MetodosLivros livroDAO = new MetodosLivros();
-    List<Livro> listaLivros = livroDAO.buscaLivro(text);
+    List<Obra> listaLivros = livroDAO.buscaLivro(text);
 
     DefaultTableModel tabelaLivros = (DefaultTableModel) Tabela.getModel();
     tabelaLivros.setNumRows(0);
 
     if (listaLivros != null && !listaLivros.isEmpty()) {
-        for (Livro livro : listaLivros) {
+        for (Obra livro : listaLivros) {
             System.out.println("Listando Livros");
             Object[] obj = new Object[]{
                     livro.getId(),
