@@ -4,6 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/lofts/OneDrive/Documentos/NetBeansProjects/ruralbooks2/src/gui/Menu.java</file>
+            <file>file:/C:/Users/lofts/OneDrive/Documentos/NetBeansProjects/ruralbooks2/src/DAO/AdicionarUsuario.java</file>
+            <file>file:/C:/Users/lofts/OneDrive/Documentos/NetBeansProjects/ruralbooks2/src/DAO/TerminalHandler.java</file>
+            <file>file:/C:/Users/lofts/OneDrive/Documentos/NetBeansProjects/ruralbooks2/src/DAO/Sugestao.java</file>
+            <file>file:/C:/Users/lofts/OneDrive/Documentos/NetBeansProjects/ruralbooks2/src/DAO/MetodosLivros.java</file>
         </group>
     </open-files>
 </project-private>
